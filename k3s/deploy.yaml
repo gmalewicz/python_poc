@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-poc
+  labels:
+    app: python-poc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-poc
+  template:
+    metadata:
+      labels:
+        app: python-poc
+    spec:
+      containers:
+      - name: python-poc
+        image: gmalewicz/python-poc:v1
+        ports:
+        - containerPort: 5000
