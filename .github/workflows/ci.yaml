@@ -20,7 +20,7 @@ jobs:
         name: Declare some variables
         shell: bash
         run:
-          echo "sha_short=$(${GITHUB_SHA::6})" >> "$GITHUB_ENV"
+          echo "sha_short=${GITHUB_SHA::6}" >> "$GITHUB_ENV"
       -
         name: Build and push
         uses: docker/build-push-action@v6
