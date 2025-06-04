@@ -13,7 +13,7 @@ def details():
     return jsonify({
         'time': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         'host': socket.gethostname(),
-        'message': "Welcome 17!"
+        'message': "Welcome 18!"
     })
 
 @app.route('/api/v1/health')
